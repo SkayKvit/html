@@ -1,0 +1,62 @@
+.about-us__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--secondary-background-color);
+}
+.about-us__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%; /* Фото займатимуть всю ширину своїх колонок */
+  height: auto; /* Автоматичне збереження пропорцій зображень */
+}
+.about-us__list {
+  list-style: none; /* Прибираємо стандартні маркери списку */
+  padding-left: 20px; /* Додаємо відступ зліва */
+}
+
+.about-us__list-item {
+  position: relative; /* Відносне позиціонування для додавання кастомного маркера */
+  padding-left: 30px; /* Відступ для тексту після галочки */
+  color: var(--primary-text-color); /* Білий колір тексту */
+}
+.about-us__image-1 {
+  width: 110px;
+  height: 150px;
+}
+
+.about-us__list-item::before {
+  content: "✔"; /* Символ галочки */
+  position: absolute;
+  left: 0; /* Позиціонуємо галочку зліва */
+  color: red; /* Червоний колір для галочки */
+  font-size: 16px; /* Розмір галочки */
+  line-height: 1; /* Вирівнюємо галочку по центру тексту */
+}
+.about-us__text {
+  width: 50%; /* Займає половину простору на великих екранах */
+  padding: 20px; /* Відступ для тексту */
+}
+.about-us__results, .about-us__call{
+
+  background-color: var(--secondary-background-color);
+
+}
+
+/* Адаптація для малих екранів */
+@media (max-width: 768px) {
+  .about-us__container {
+    flex-direction: column; /* Перехід на вертикальне розташування */
+  }
+
+  .about-us__images,
+  .about-us__text {
+    width: 100%; /* Займає весь простір на малих екранах */
+  }
+
+  .about-us__image {
+    width: 50%; /* Зображення займає 50% ширини, щоб бути по два в рядку */
+    height: auto; /* Автоматичне висота для збереження пропорцій */
+  }
+}

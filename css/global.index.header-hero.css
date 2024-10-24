@@ -1,0 +1,15 @@
+.header__title{
+    font-weight:900px;
+    font-size:54px;
+    margin: 45px 0px
+}
+.header__description{
+    font-weight : 400px;
+    font-size:18px;
+    margin: 45px 0px
+}
+.header__social-icon {
+    width: 12px;
+    height: 12px;
+    fill:var(--color--primary); /* задаємо білий колір */
+  }

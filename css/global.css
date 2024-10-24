@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h3 {
+  color: var(--color--primary);
+}
+p, li {
+  color: var(--color--primary);
+  font-weight: 400;
+}
+
+:root {
+  --color--primary: white;
+  --color-secondary: #141414;
+  --primary-text-color: var(--color--primary);
+  --secondary-text-color: var(--color-secondary);
+  --secondary-background-color: var(--color-secondary);
+
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+nav {
+  display: block;
+  margin-bottom: 20px; /* додаємо відступ знизу для навігації */
+}
+
+section {
+  display: block;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/background-header.png"); /* Шлях до зображення */
+  background-size: cover; /* Зображення буде повністю видно, але зберігаючи пропорції */
+  background-repeat: no-repeat; /* Вимикає повторення зображення */
+  background-position: center; /* Центрує зображення в заголовку */
+  display: flex; /* Додає Flexbox для вирівнювання елементів всередині */
+  align-items: center; /* Вертикальне вирівнювання в центрі */
+  width: 1000px; /* Встановлює ширину заголовка */
+  min-height: 320px; /* Встановлює висоту заголовка */
+  justify-content: space-between; /* Вирівнює вміст по краях */
+  margin: auto;
+  flex-direction: column;
+  align-items: stretch;
+}
+.header__nav,
+.header__hero {
+  width: 100%; /* Обидва елементи займають всю ширину */
+  margin: 0; /* Скидаємо зовнішні відступи */
+  padding: 10px 20px; /* Внутрішні відступи для кращого вигляду */
+}
+ 
+
+@media (max-width: 768px) {
+  .header__title {
+      font-size: 1.5em; /* Зменшує розмір заголовка на менших екранах */
+  }
+  
+  .header__description {
+      font-size: 1em; /* Зменшує розмір опису на менших екранах */
+  }
+}
